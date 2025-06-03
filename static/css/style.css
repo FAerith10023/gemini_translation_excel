@@ -1,0 +1,345 @@
+/* Excel 翻译器 Web 应用样式 */
+
+:root {
+    --primary-color: #0d6efd;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #0dcaf0;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: var(--dark-color);
+}
+
+.container {
+    max-width: 1000px;
+}
+
+/* 头部样式 */
+.header-section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header-section h1 {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.header-section .lead {
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+/* 卡片样式 */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    background: linear-gradient(45deg, var(--primary-color), #6f42c1);
+    color: white;
+    border-radius: 15px 15px 0 0 !important;
+    border: none;
+    padding: 1rem 1.5rem;
+}
+
+.card-header h5 {
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* 表单元素样式 */
+.form-control {
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.btn {
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-lg {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 关键词按钮样式 */
+.keyword-btn {
+    margin: 2px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.keyword-btn:hover {
+    transform: scale(1.05);
+}
+
+.keyword-btn.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+/* 文件上传区域 */
+#fileInput {
+    border: 2px dashed #dee2e6;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+#fileInput:hover {
+    border-color: var(--primary-color);
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* 进度条样式 */
+.progress {
+    height: 8px;
+    border-radius: 10px;
+    background-color: #e9ecef;
+}
+
+.progress-bar {
+    border-radius: 10px;
+    background: linear-gradient(45deg, var(--primary-color), var(--success-color));
+}
+
+/* 文件信息样式 */
+.alert-info {
+    background: linear-gradient(45deg, rgba(13, 202, 240, 0.1), rgba(13, 110, 253, 0.1));
+    border: 1px solid rgba(13, 202, 240, 0.2);
+    border-radius: 10px;
+}
+
+/* 结果区域样式 */
+#resultSection .card-header {
+    background: linear-gradient(45deg, var(--success-color), #20c997);
+}
+
+/* Toast 通知样式 */
+.toast {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.toast-header {
+    background: var(--primary-color);
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+/* 连接测试结果样式 */
+.connection-success {
+    color: var(--success-color);
+    font-weight: 500;
+}
+
+.connection-error {
+    color: var(--danger-color);
+    font-weight: 500;
+}
+
+/* 图标样式 */
+.bi {
+    margin-right: 0.5rem;
+}
+
+/* 链接样式 */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0a58ca;
+    text-decoration: underline;
+}
+
+/* 页脚样式 */
+footer {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+/* 动画效果 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .header-section {
+        padding: 1.5rem;
+        margin-top: 1rem;
+    }
+    
+    .header-section h1 {
+        font-size: 2rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .btn-group {
+        flex-direction: column;
+    }
+    
+    .keyword-btn {
+        margin: 1px 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-section h1 {
+        font-size: 1.75rem;
+    }
+    
+    .btn-lg {
+        font-size: 1rem;
+        padding: 0.5rem 1.5rem;
+    }
+}
+
+/* 加载动画 */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 成功/错误状态样式 */
+.status-success {
+    background: linear-gradient(45deg, rgba(25, 135, 84, 0.1), rgba(32, 201, 151, 0.1));
+    border: 1px solid rgba(25, 135, 84, 0.2);
+    color: var(--success-color);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+}
+
+.status-error {
+    background: linear-gradient(45deg, rgba(220, 53, 69, 0.1), rgba(255, 107, 107, 0.1));
+    border: 1px solid rgba(220, 53, 69, 0.2);
+    color: var(--danger-color);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+}
+
+/* 文件拖拽区域样式 */
+.file-drop-zone {
+    border: 2px dashed #dee2e6;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.file-drop-zone:hover,
+.file-drop-zone.dragover {
+    border-color: var(--primary-color);
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+.file-drop-zone.dragover {
+    background-color: rgba(13, 110, 253, 0.1);
+}
+
+/* 隐藏默认文件输入 */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* 术语库匹配结果样式 */
+#terminologyResultSection .card-header {
+    background: linear-gradient(45deg, var(--info-color), #0d6efd);
+}
+
+/* 按钮间距 */
+.btn.me-3 {
+    margin-right: 1rem !important;
+}
+
+/* 术语库匹配进度条样式 */
+#terminologyProgress .progress-bar {
+    background: linear-gradient(45deg, var(--info-color), #0dcaf0);
+} 
